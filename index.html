@@ -1,0 +1,51 @@
+
+
+
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Background in Iframe</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    .pdf-background {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .pdf-background iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      z-index: -1; /* Push iframe to the background */
+    }
+    .content {
+      position: relative;
+      z-index: 1; /* Place content above the iframe */
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="pdf-background">
+    <iframe src="../file/catalog-template-05.pdf" frameborder="0" width="100%" height="100%"></iframe>
+    <div class="content">
+ 
+    </div>
+  </div>
+</body>
+</html>
